@@ -8,7 +8,7 @@ export class Todo {
   @Column()
   title: string;
 
-  @Column({ default: true })
+  @Column({ default: false })
   created: boolean;
 
   @Column({ default: false })
