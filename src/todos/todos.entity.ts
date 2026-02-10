@@ -20,6 +20,6 @@ export class Todo {
   @Column({ default: false })
   problem: boolean;
 
-  @Column({ nullable: true })
-  problem_desc?: string;
+  @Column({ type: 'text', nullable: true })
+  problem_desc?: string | null;
 }
