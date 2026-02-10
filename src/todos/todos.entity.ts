@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+@Entity('todos')
 export class Todo {
   @PrimaryGeneratedColumn()
   id: number;
@@ -8,7 +8,7 @@ export class Todo {
   @Column()
   title: string;
 
-  @Column({ default: false })
+  @Column({ default: true })
   created: boolean;
 
   @Column({ default: false })
@@ -17,8 +17,8 @@ export class Todo {
   @Column({ default: false })
   on_going: boolean;
 
-  @Column({ default: '' })
-  problem: string;
+  @Column({ default: false })
+  problem: boolean;
 
   @Column({ nullable: true })
   problem_desc?: string;
