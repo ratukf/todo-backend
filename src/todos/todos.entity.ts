@@ -8,8 +8,8 @@ export class Todo {
   @Column()
   title: string;
 
-  @Column({ default: 'created' })
-  status: string;
+  @Column({ default: true })
+  created: boolean;
 
   @Column({ default: false })
   completed: boolean;
