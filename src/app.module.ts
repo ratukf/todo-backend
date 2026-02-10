@@ -4,9 +4,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TodosModule } from './todos/todos.module';
+import { Todo } from './todos/todos.entity';
 
 dotenv.config();
-console.log('DB PASS:', process.env.DB_PASS);
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -17,6 +18,7 @@ console.log('DB PASS:', process.env.DB_PASS);
       password: process.env.DB_PASS,
       database: process.env.DB_NAME,
       autoLoadEntities: true,
+      entities: [Todo],
       synchronize: true,
     }),
     TodosModule,
