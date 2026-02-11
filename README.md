@@ -105,8 +105,6 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Technical Decision
-
 ## Technical Decisions
 
 1. NestJS + TypeScript are chosen for a modular and maintainable project structure, with built-in support for DTOs and decorators for validation.
