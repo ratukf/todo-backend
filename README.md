@@ -105,6 +105,16 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Technical Decision
+
+## Technical Decisions
+
+1. NestJS + TypeScript are chosen for a modular and maintainable project structure, with built-in support for DTOs and decorators for validation.
+
+2. TypeORM provides entity-based database management and supports both PostgreSQL and MySQL, making migrations and queries simpler.
+
+3. Todo Status & Problem Logic where each todo has a single active status (`created`, `on_going`, `completed`, `problem`) and an optional `problem_desc`. Patch requests automatically reset other statuses to false to maintain consistency.
+
 ## License
 
 MIT
